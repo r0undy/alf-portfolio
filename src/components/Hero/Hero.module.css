@@ -92,6 +92,15 @@
   }
 }
 
+@keyframes blinkCaret {
+  0%, 45% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -144,19 +153,19 @@
 .decoration1 {
   position: absolute;
   transform: rotate(-78.98deg);
-  opacity: 0.9;
+  opacity: 0.55;
   width: 512px;
   height: auto;
   top: 21px;
   left: 77px;
-  animation: rotate 120s linear infinite, pulse 5s ease-in-out infinite;
+  animation: rotate 260s linear infinite, pulse 12s ease-in-out infinite;
 }
 
 /* Gradient Background */
 .gradientContainer {
   position: absolute;
   top: 160px;
-  left: 420px;
+  left: 520px;
   width: 385px;
   height: 431px;
   z-index: 1;
@@ -337,6 +346,12 @@
   animation: fadeInUp 1s ease-out 1.3s both;
 }
 
+.title::after {
+  content: '|';
+  margin-left: 6px;
+  animation: blinkCaret 0.9s steps(1, end) infinite;
+}
+
 .designation {
   font-size: 21px;
   letter-spacing: 0.42px;
@@ -396,7 +411,8 @@
   width: 655px;
   height: auto;
   transform: rotate(-78.98deg);
-  animation: rotate 80s linear infinite, pulse 3s ease-in-out infinite;
+  opacity: 0.45;
+  animation: rotate 280s linear infinite, pulse 14s ease-in-out infinite;
 }
 
 .decoration3 {
@@ -406,7 +422,8 @@
   width: 537px;
   height: auto;
   transform: rotate(-78.98deg);
-  animation: rotate 100s linear infinite reverse, pulse 4s ease-in-out infinite;
+  opacity: 0.4;
+  animation: rotate 300s linear infinite reverse, pulse 16s ease-in-out infinite;
 }
 
 /* Responsive Styles */

@@ -14,23 +14,52 @@ interface HeroProps {
   tagline?: string;
 }
 
+const TYPEWRITER_PHRASES = ["I'm a developer", 'Cloud enthusiast'];
+
 export const Hero: React.FC<HeroProps> = () => {
   const [typewriterText, setTypewriterText] = useState('');
-  const fullText = "I'm a Developer.|";
-  
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
   useEffect(() => {
-    let currentIndex = 0;
-    const typingInterval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setTypewriterText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(typingInterval);
+    const currentPhrase = TYPEWRITER_PHRASES[phraseIndex];
+    const isComplete = typewriterText === currentPhrase;
+    const isEmpty = typewriterText.length === 0;
+
+    let timeout = 90;
+
+    if (!isDeleting && isComplete) {
+      timeout = 1200;
+    } else if (isDeleting && isEmpty) {
+      timeout = 300;
+    } else if (isDeleting) {
+      timeout = 50;
+    }
+
+    const timer = setTimeout(() => {
+      if (!isDeleting && !isComplete) {
+        setTypewriterText(currentPhrase.slice(0, typewriterText.length + 1));
+        return;
       }
-    }, 100);
-    
-    return () => clearInterval(typingInterval);
-  }, []);
+
+      if (isDeleting && !isEmpty) {
+        setTypewriterText(currentPhrase.slice(0, typewriterText.length - 1));
+        return;
+      }
+
+      if (!isDeleting && isComplete) {
+        setIsDeleting(true);
+        return;
+      }
+
+      if (isDeleting && isEmpty) {
+        setIsDeleting(false);
+        setPhraseIndex((prev) => (prev + 1) % TYPEWRITER_PHRASES.length);
+      }
+    }, timeout);
+
+    return () => clearTimeout(timer);
+  }, [typewriterText, phraseIndex, isDeleting]);
   return (
     <section className={styles.hero} role="region" aria-label="Hero section">
       {/* Background decorative elements */}
