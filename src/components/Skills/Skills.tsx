@@ -5,7 +5,7 @@ import mascot from '../../assets/skills/mascot.png';
 import arrows from '../../assets/skills/arrows.svg';
 import ellipseBg from '../../assets/skills/ellipse-bg.svg';
 import background from '../../assets/skills/background.png';
-import Antigravity from '../Antigravity/Antigravity';
+// import Antigravity from '../Antigravity/Antigravity';
 
 interface SkillsProps {
   skills: Skill[];
@@ -15,7 +15,7 @@ const Skills = ({ skills }: SkillsProps) => {
   return (
     <section className={styles.skills}>
       {/* Antigravity particle effect */}
-      <div className={styles.antigravityContainer}>
+      {/* <div className={styles.antigravityContainer}>
         <Antigravity
           count={300}
           magnetRadius={6}
@@ -28,7 +28,7 @@ const Skills = ({ skills }: SkillsProps) => {
           autoAnimate={true}
           particleVariance={1}
         />
-      </div>
+      </div> */}
       
       {/* Background decorative element */}
       <div className={styles.backgroundDecor}>
@@ -49,9 +49,9 @@ const Skills = ({ skills }: SkillsProps) => {
         {/* Skills visualization */}
         <div className={styles.skillsVisualization}>
           {/* Arrows connecting skills */}
-          <div className={styles.arrowsContainer}>
+          {/* <div className={styles.arrowsContainer}>
             <img src={arrows} alt="" className={styles.arrows} />
-          </div>
+          </div> */}
           
           {/* Background ellipse */}
           <div className={styles.ellipseContainer}>
@@ -64,13 +64,13 @@ const Skills = ({ skills }: SkillsProps) => {
           </div>
           
           {/* Skill items in circular layout */}
-          {skills.length > 0 && (
+          {/* {skills.length > 0 && (
             <div className={styles.skillsCircle}>
               {skills.slice(0, 13).map((skill, index) => (
                 <SkillItem key={skill.id} skill={skill} index={index} />
               ))}
             </div>
-          )}
+          )} */}
         </div>
         
         {skills.length === 0 && (

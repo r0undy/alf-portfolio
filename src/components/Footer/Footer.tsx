@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ contact }) => {
         <img src={asset24} alt="" className={styles.asset24} />
         <img src={asset23} alt="" className={styles.asset23} />
         <img src={vector12} alt="" className={styles.vector12} />
-        <img src={star} alt="" className={styles.star} />
+        {/* <img src={star} alt="" className={styles.star} /> */}
       </div>
       
       <div className={styles.container}>
