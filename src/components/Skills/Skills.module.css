@@ -1,0 +1,353 @@
+/* Skills Section Styles - Based on Figma Design */
+
+.skills {
+  position: relative;
+  padding: var(--spacing-4xl) 0;
+  background: var(--color-bg-primary);
+  overflow: hidden;
+  min-height: 860px;
+}
+
+/* Antigravity particle effect container */
+.antigravityContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Background decorative element */
+.backgroundDecor {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2348px;
+  height: 543px;
+  opacity: 0.74;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  z-index: 2;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-4xl);
+}
+
+.headerText {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  color: var(--color-text-primary);
+  letter-spacing: 0.48px;
+  line-height: 1.3;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.highlight {
+  color: #a362ff;
+}
+
+.subheaderText {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  color: var(--color-text-primary);
+  letter-spacing: 0.48px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Skills Visualization */
+.skillsVisualization {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+/* Arrows connecting skills */
+.arrowsContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 325px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.arrows {
+  width: 100%;
+  height: 100%;
+}
+
+/* Background ellipse */
+.ellipseContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 542px;
+  height: 330px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ellipse {
+  width: 100%;
+  height: 100%;
+}
+
+/* Central mascot */
+.mascotContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  z-index: 3;
+}
+
+.mascot {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Skills Circle Layout */
+.skillsCircle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.skillItem {
+  position: absolute;
+  z-index: 2;
+}
+
+.skillCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(113, 39, 186, 0.3), rgba(152, 87, 211, 0.3));
+  border: 2px solid var(--color-accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skillCircle:hover {
+  transform: scale(1.1);
+  box-shadow: var(--glow-purple-strong);
+  border-color: var(--color-accent-secondary);
+}
+
+.skillIcon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  mix-blend-mode: lighten;
+}
+
+/* Positioning for each skill item (circular layout) */
+.skillItem0 {
+  top: 97px;
+  left: 255px;
+}
+
+.skillItem1 {
+  top: 97px;
+  left: 310px;
+}
+
+.skillItem2 {
+  top: 97px;
+  left: 365px;
+}
+
+.skillItem3 {
+  top: 97px;
+  left: 423px;
+}
+
+.skillItem4 {
+  top: 158px;
+  left: 283px;
+}
+
+.skillItem5 {
+  top: 97px;
+  left: 530px;
+}
+
+.skillItem6 {
+  top: 97px;
+  left: 585px;
+}
+
+.skillItem7 {
+  top: 97px;
+  left: 475px;
+}
+
+.skillItem8 {
+  top: 158px;
+  left: 395px;
+}
+
+.skillItem9 {
+  top: 158px;
+  left: 450px;
+}
+
+.skillItem10 {
+  top: 158px;
+  left: 509px;
+}
+
+.skillItem11 {
+  top: 158px;
+  left: 564px;
+}
+
+.skillItem12 {
+  top: 158px;
+  left: 343px;
+}
+
+.emptyState {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--spacing-2xl) 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .skills {
+    min-height: 700px;
+  }
+  
+  .skillsVisualization {
+    max-width: 700px;
+    height: 500px;
+  }
+  
+  .arrowsContainer {
+    width: 220px;
+    height: 255px;
+  }
+  
+  .ellipseContainer {
+    width: 420px;
+    height: 260px;
+  }
+  
+  .mascotContainer {
+    width: 140px;
+    height: 140px;
+  }
+  
+  /* Scale down skill positions */
+  .skillItem0 { top: 77px; left: 195px; }
+  .skillItem1 { top: 77px; left: 240px; }
+  .skillItem2 { top: 77px; left: 285px; }
+  .skillItem3 { top: 77px; left: 333px; }
+  .skillItem4 { top: 128px; left: 218px; }
+  .skillItem5 { top: 77px; left: 420px; }
+  .skillItem6 { top: 77px; left: 465px; }
+  .skillItem7 { top: 77px; left: 375px; }
+  .skillItem8 { top: 128px; left: 308px; }
+  .skillItem9 { top: 128px; left: 353px; }
+  .skillItem10 { top: 128px; left: 401px; }
+  .skillItem11 { top: 128px; left: 446px; }
+  .skillItem12 { top: 128px; left: 268px; }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: var(--spacing-2xl) 0;
+    min-height: 600px;
+  }
+  
+  .headerText {
+    font-size: 20px;
+  }
+  
+  .subheaderText {
+    font-size: 14px;
+  }
+  
+  .skillsVisualization {
+    max-width: 500px;
+    height: 400px;
+  }
+  
+  .arrowsContainer {
+    width: 160px;
+    height: 185px;
+  }
+  
+  .ellipseContainer {
+    width: 300px;
+    height: 185px;
+  }
+  
+  .mascotContainer {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .skillCircle {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .skillIcon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Further scale down for mobile */
+  .skillItem0 { top: 57px; left: 135px; }
+  .skillItem1 { top: 57px; left: 170px; }
+  .skillItem2 { top: 57px; left: 205px; }
+  .skillItem3 { top: 57px; left: 243px; }
+  .skillItem4 { top: 98px; left: 153px; }
+  .skillItem5 { top: 57px; left: 300px; }
+  .skillItem6 { top: 57px; left: 335px; }
+  .skillItem7 { top: 57px; left: 275px; }
+  .skillItem8 { top: 98px; left: 218px; }
+  .skillItem9 { top: 98px; left: 253px; }
+  .skillItem10 { top: 98px; left: 291px; }
+  .skillItem11 { top: 98px; left: 326px; }
+  .skillItem12 { top: 98px; left: 188px; }
+  
+  .backgroundDecor {
+    opacity: 0.3;
+  }
+}

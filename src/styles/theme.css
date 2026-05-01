@@ -1,0 +1,78 @@
+/* Portfolio Website Design System - Theme Variables */
+
+:root {
+  /* ===== Color Palette ===== */
+  
+  /* Primary Backgrounds */
+  --color-bg-primary: #11071f;
+  --color-bg-secondary: #1a0b2e;
+  
+  /* Purple Accents */
+  --color-accent-primary: #7127ba;
+  --color-accent-secondary: #9857d3;
+  
+  /* Text Colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e0e0e0;
+  --color-text-muted: #a0a0a0;
+  
+  /* Gradients */
+  --gradient-purple: linear-gradient(135deg, #7127ba 0%, #9857d3 100%);
+  --gradient-dark: linear-gradient(180deg, #11071f 0%, #1a0b2e 100%);
+  
+  /* Effects */
+  --glow-purple: 0 0 20px rgba(113, 39, 186, 0.5);
+  --glow-purple-strong: 0 0 30px rgba(113, 39, 186, 0.8);
+  
+  /* ===== Typography ===== */
+  
+  /* Font Families */
+  --font-primary: 'Poppins', sans-serif;
+  --font-heading: 'Preahvihear', sans-serif;
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  --font-size-6xl: 4rem;      /* 64px */
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* ===== Spacing System ===== */
+  
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  --spacing-4xl: 6rem;     /* 96px */
+  
+  /* Section Spacing */
+  --section-padding-mobile: var(--spacing-2xl);
+  --section-padding-tablet: var(--spacing-3xl);
+  --section-padding-desktop: var(--spacing-4xl);
+  
+  /* ===== Layout ===== */
+  
+  /* Container */
+  --container-max-width: 1200px;
+  --container-padding: var(--spacing-lg);
+  
+  /* Breakpoints (for reference in media queries) */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+}

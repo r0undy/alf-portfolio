@@ -1,0 +1,280 @@
+/* Projects Section Styles - Based on Figma Design */
+
+.projects {
+  position: relative;
+  padding: var(--spacing-4xl) 0;
+  background: var(--color-bg-primary);
+  overflow: hidden;
+  min-height: 1200px;
+}
+
+/* Background gradients */
+.gradientContainer1 {
+  position: absolute;
+  top: 9px;
+  right: 150px;
+  width: 642px;
+  height: 720px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradientContainer2 {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 625px;
+  height: 700px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradientContainer3 {
+  position: absolute;
+  bottom: 100px;
+  left: 269px;
+  width: 572px;
+  height: 641px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradient {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  z-index: 2;
+}
+
+.emptyState {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--spacing-2xl) 0;
+}
+
+/* Projects Layout - Staggered */
+.projectsLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+/* Project Card */
+.projectCard {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  min-height: 400px;
+}
+
+.projectCardLeft {
+  /* Image on left, text on right */
+}
+
+.projectCardRight {
+  /* Image on right, text on left */
+  direction: rtl;
+}
+
+.projectCardRight > * {
+  direction: ltr;
+}
+
+/* Project Image Container */
+.projectImageContainer {
+  position: relative;
+  width: 100%;
+  height: 354px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.projectImageContainer:hover {
+  transform: translateY(-8px);
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Project Info */
+.projectInfo {
+  position: relative;
+  z-index: 3;
+}
+
+.projectInfoCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.featuredLabel {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-accent-secondary);
+  letter-spacing: 0.32px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.projectName {
+  font-family: 'Poppins', sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  color: #ccd6f6;
+  letter-spacing: 0.68px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Glassmorphism Description Card */
+.projectDescriptionCard {
+  background: rgba(43, 11, 58, 0.6);
+  backdrop-filter: blur(40px);
+  border-radius: 14px;
+  padding: var(--spacing-xl);
+  margin: var(--spacing-md) 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.projectDescriptionCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 15% 20%,
+    rgba(105, 59, 147, 0.2) 0%,
+    rgba(106, 92, 171, 0.16) 19%,
+    rgba(107, 125, 195, 0.12) 39%,
+    rgba(110, 191, 244, 0.04) 77%,
+    rgba(70, 144, 212, 0) 100%
+  );
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.projectDescription {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ccd6f6;
+  line-height: 1.6;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Project Links */
+.projectLinks {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.projectLinkIcon {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.projectLinkIcon:hover {
+  transform: scale(1.1);
+}
+
+.projectLinkIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .projects {
+    min-height: auto;
+  }
+  
+  .projectCard {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .projectCardRight {
+    direction: ltr;
+  }
+  
+  .projectImageContainer {
+    height: 300px;
+  }
+  
+  .projectName {
+    font-size: 28px;
+  }
+  
+  .projectDescription {
+    font-size: 16px;
+  }
+  
+  .gradientContainer1,
+  .gradientContainer2,
+  .gradientContainer3 {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .projectsLayout {
+    gap: var(--spacing-4xl);
+  }
+  
+  .projectImageContainer {
+    height: 250px;
+  }
+  
+  .featuredLabel {
+    font-size: 14px;
+  }
+  
+  .projectName {
+    font-size: 24px;
+  }
+  
+  .projectDescription {
+    font-size: 14px;
+  }
+  
+  .projectDescriptionCard {
+    padding: var(--spacing-md);
+  }
+  
+  .projectLinkIcon {
+    width: 28px;
+    height: 28px;
+  }
+}

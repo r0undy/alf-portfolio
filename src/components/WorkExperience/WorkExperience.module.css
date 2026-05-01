@@ -1,0 +1,302 @@
+/* Work Experience Component Styles - Based on Figma Design */
+
+.workExperience {
+  position: relative;
+  width: 100%;
+  background: var(--color-bg-primary);
+  padding: var(--spacing-4xl) 0;
+  overflow: hidden;
+}
+
+/* Background gradient */
+.gradientContainer {
+  position: absolute;
+  top: -22px;
+  right: 100px;
+  width: 625px;
+  height: 700px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradient {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Decorative element */
+.decorativeElement {
+  position: absolute;
+  left: -0.61%;
+  top: 286px;
+  width: 746px;
+  height: 617px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.decoration {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-78.98deg);
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  z-index: 2;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: normal;
+  color: var(--color-text-primary);
+  letter-spacing: 0.8px;
+  margin-bottom: var(--spacing-3xl);
+  text-align: left;
+  margin-left: 14px;
+}
+
+/* Grid layout for experience cards */
+.experienceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-2xl);
+  max-width: 1200px;
+}
+
+/* Experience Card */
+.experienceCard {
+  position: relative;
+  background: linear-gradient(137.87deg, #130428 19.946%, #251043 67.641%, #38126d 107.08%, #261045 156.61%, #190634 183.21%);
+  border-radius: 15px;
+  box-shadow: 4px 7px 26px 0px rgba(0, 0, 0, 0.12);
+  padding: var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-lg);
+  min-height: 193px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experienceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 4px 10px 35px 0px rgba(113, 39, 186, 0.3);
+}
+
+/* Card gradient overlay */
+.cardGradient {
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+/* Purple accent bar at top */
+.accentBar {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: #4f228d;
+  border-radius: 15px 15px 0 0;
+}
+
+/* Icon container */
+.iconContainer {
+  position: relative;
+  flex-shrink: 0;
+  width: 115px;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+/* Icon decoration (ellipse behind icon) */
+.iconDecoration {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(176.86deg) skewX(0.62deg);
+  width: 113px;
+  height: 48px;
+  z-index: 1;
+}
+
+.ellipse {
+  width: 100%;
+  height: 100%;
+}
+
+/* Decorative dots around icon */
+.dots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+}
+
+.dot:nth-child(1) {
+  top: 60px;
+  left: 3px;
+}
+
+.dot:nth-child(2) {
+  top: 38px;
+  right: -5px;
+}
+
+.dot:nth-child(3) {
+  top: 3px;
+  left: 19px;
+}
+
+.dot:nth-child(4) {
+  bottom: -5px;
+  left: 93px;
+}
+
+/* Card content */
+.cardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding-right: var(--spacing-md);
+}
+
+.cardTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.cardDescription {
+  font-family: 'Poppins', sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Learn More Button */
+.learnMoreButton {
+  position: relative;
+  width: 119px;
+  height: 33px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: var(--spacing-sm);
+  transition: transform 0.2s ease;
+}
+
+.learnMoreButton:hover {
+  transform: scale(1.05);
+}
+
+.buttonBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.buttonText {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  letter-spacing: 0.5px;
+  z-index: 1;
+}
+
+.emptyState {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--spacing-2xl);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .experienceGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .gradientContainer {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .workExperience {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .heading {
+    font-size: 32px;
+    text-align: center;
+    margin-left: 0;
+  }
+  
+  .experienceCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-lg);
+  }
+  
+  .iconContainer {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .cardContent {
+    padding-right: 0;
+  }
+  
+  .cardTitle {
+    font-size: 22px;
+  }
+  
+  .cardDescription {
+    font-size: 10px;
+  }
+  
+  .learnMoreButton {
+    margin: var(--spacing-md) auto 0;
+  }
+  
+  .decorativeElement {
+    display: none;
+  }
+}
