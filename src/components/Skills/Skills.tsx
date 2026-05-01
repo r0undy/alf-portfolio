@@ -1,8 +1,8 @@
 import type { Skill } from '../../types/portfolio';
-import SkillItem from './SkillItem';
+// import SkillItem from './SkillItem';
 import styles from './Skills.module.css';
 import mascot from '../../assets/skills/mascot.png';
-import arrows from '../../assets/skills/arrows.svg';
+// import arrows from '../../assets/skills/arrows.svg';
 import ellipseBg from '../../assets/skills/ellipse-bg.svg';
 import background from '../../assets/skills/background.png';
 // import Antigravity from '../Antigravity/Antigravity';

@@ -3,7 +3,7 @@ import type { ContactInfo } from '../../types/portfolio';
 import styles from './Footer.module.css';
 import asset24 from '../../assets/footer/asset24.png';
 import asset23 from '../../assets/footer/asset23.png';
-import star from '../../assets/footer/star.png';
+// import star from '../../assets/footer/star.png';
 import vector12 from '../../assets/footer/vector12.svg';
 import socialIcons from '../../assets/footer/social-icons.svg';
 
